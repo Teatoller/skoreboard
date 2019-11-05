@@ -18,6 +18,12 @@
  
 8. Run `yarn start`
 
+### Try out the following once the browser opens up
+9. Add new player name.
+10. Increase or decrease scores
+11. Delete player name from the scoreboard
+12. View stats on the scoreboard header 
+
 ## Available Scripts
 
 In the project directory, you can run:
