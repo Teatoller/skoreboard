@@ -1,32 +1,36 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Player from "./Player";
+import AddPlayerForm from "./AddPlayerForm";
 
 class App extends Component {
-  state = {
-    players: [
-      {
-        name: "Steven",
-        score: 0,
-        id: 1
-      },
-      {
-        name: "Denzel",
-        score: 0,
-        id: 2
-      },
-      {
-        name: "Nigel",
-        score: 0,
-        id: 3
-      },
-      {
-        name: "Fay",
-        score: 0,
-        id: 4
-      }
-    ]
-  };
+  constructor() {
+    super();
+    this.state = {
+      players: [
+        {
+          name: "Steven",
+          score: 0,
+          id: 1
+        },
+        {
+          name: "Denzel",
+          score: 0,
+          id: 2
+        },
+        {
+          name: "Nigel",
+          score: 0,
+          id: 3
+        },
+        {
+          name: "Fay",
+          score: 0,
+          id: 4
+        }
+      ]
+    };
+  }
 
   handleScoreChange = (index, delta) => {
     this.setState(prevState => ({
@@ -64,6 +68,8 @@ class App extends Component {
             removePlayer={this.handleRemovePlayer}
           />
         ))}
+
+        <AddPlayerForm />
       </div>
     );
   }
