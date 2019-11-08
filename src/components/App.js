@@ -43,15 +43,15 @@ class App extends Component {
   handleAddPlayer = name => {
     this.setState(prevState => {
       return {
-      players: [
-        ...prevState.players,
-        {
-          name: name,
-          score: 0,
-          id: (this.prevPlayerId += 1)
-        }
-      ]
-    }
+        players: [
+          ...prevState.players,
+          {
+            name: name,
+            score: 0,
+            id: (this.prevPlayerId += 1)
+          }
+        ]
+      };
     });
   };
 
@@ -66,10 +66,7 @@ class App extends Component {
   render() {
     return (
       <div className="scoreboard">
-        <Header
-          title="Scoreboard"
-          players={this.state.players}
-        />
+        <Header title="Scoreboard" players={this.state.players} />
 
         {/* Players list */}
         {this.state.players.map((player, index) => (
