@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function Counter({ score, index, changeScore}) {
+function Counter({ score, index, changeScore }) {
   return (
     <div className="counter">
       <button
@@ -25,4 +26,9 @@ function Counter({ score, index, changeScore}) {
     </div>
   );
 }
+Counter.protoTypes = {
+  score: PropTypes.number,
+  index: PropTypes.number,
+  changeScore: PropTypes.func
+};
 export default Counter;
